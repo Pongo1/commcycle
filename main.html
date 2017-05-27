@@ -24,6 +24,8 @@
 
     <!-- Theme CSS -->
     <link href="Creatve Hookups/css/creative.min.css" rel="stylesheet">
+    <!-- Home made js-->
+    <script src="index.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,25 +33,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script> 
-
-
-  var hide = function(){
-
-    var uploadForm = document.getElementById('about');
-    uploadForm.style.display = "none"; 
-
-
-};
-
- var unHide = function(){
-
-    var uploadForm = document.getElementById('about');
-    uploadForm.style.display = "block"; 
-
-
-};
-</script>
 
 </head>
 
@@ -94,14 +77,14 @@
                 <hr>
                 <p align="right"><b>HELLO THERE,</b><br>Do you have any item you do not use anymore? Does it still do its job. Can another person use it. Help another out by uploading an image of that item and filling the upload form.</p>
                 <div class="fileupload fileupload-new" data-provides="fileupload">
-                            <span class="btn btn-info btn-file" >
+                            <span class="btn btn-info btn-file"  >
                             <span class="fileupload-new">Upload</span>
                             <span class="fileupload-exists">File Selected</span>         
-                            <input type="file" />
+                            <input type="file" onclick="appear('postButton')" />
                             </span>
                             <span class="fileupload-preview"></span>
-                            <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
-                            <a class="btn btn-warning" onclick = "unHide()" style="width:70px;">Post</a>
+                            <a href="#" class="close fileupload-exists" data-dismiss="fileupload" onclick="appear('postButton')" style="float: none">×</a>
+                            <a id ="postButton" class="btn btn-warning" onclick = "unHide('uploadSheet')" style="cursor: not-allowed; opacity:0.0;width:70px;" >Post</a>
                     </div>
             
                               
@@ -122,7 +105,7 @@
     </section>
 
 <!-- ########################################################### UPLOAD FORM ##############################################-->
-      <section class="bg-primary" id="about" style="display:none; background-color: black;opacity:0.95; border:solid 2px gray; margin-top:5px;">
+      <section class="bg-primary" id="uploadSheet" style=" display:none; background-color: black;opacity:0.95; border:solid 2px gray; margin-top:5px;">
         <div class="container" >
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -174,6 +157,7 @@
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
+                                </div>
                                 
                             
                             
@@ -181,18 +165,19 @@
                             <div class="row" >
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" style=" height:120px;width:740px; margin-left:15px;" placeholder="Any additional information about the product. Optional " id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                        <textarea class="form-control" style=" height:120px;width:350px; margin-left:0px;" placeholder="Any additional information about the product. Optional " id="message" required="" data-validation-required-message="Please enter a message."></textarea>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
-                                <div class="clearfix"></div>
                             </div>
+                                <div class="clearfix"></div>
+                            
                             
                         
                                 
                                     
-                                    <button type="submit" class="btn btn-danger" style="margin-left:420px;">Cancel upload</button>
-                                    <button type="submit" class="btn btn-success">Finalise Post</button>
+                                    <button type="submit" class="btn btn-danger" style="margin-left:0px;">Cancel upload</button>
+                                    <button type="submit" class="btn btn-success" onclick="hide('uploadSheet'); vanish('postButton')">Finalise Post</button>
                                     
                             
                         

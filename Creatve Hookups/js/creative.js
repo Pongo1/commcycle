@@ -1,3 +1,23 @@
+var hide = function(){
+
+    var uploadForm = document.getElementById('about');
+    uploadForm.style.display = "none"; 
+
+
+};
+
+ var unHide = function(){
+
+    var uploadForm = document.getElementById('about');
+    uploadForm.style.display = "block"; 
+
+
+};
+
+
+
+
+
 
 
 (function($) {
