@@ -655,7 +655,7 @@
 					<div class="col-lg-12 text-center">
 						<div class="section-title">
 							<h1 style="color:white;"><strong>Upload Form</strong></h1>
-							<p align="left" style="color:white;">By uploading this image you certify that the item exists and you have no other plans for that item. You are uploading the item unto the Shop-sector which indicates that your item is for sale. There will be a 10% interest rate on the price you indicate. You do not need to manually do that, just input your price. You shall not come back for your item after it has already been given out and been used. <br><input style="color:green;" type="checkbox" >I agree with these terms and conditions.
+							<p align="left" style="color:white;">By uploading this image you certify that the item exists and you have no other plans for that item. You are uploading the item unto the Shop-sector which indicates that your item is for sale. There will be a 10% interest rate on the price you indicate. You do not need to manually do that, just input your price. You shall not come back for your item after it has already been given out and been used. <br><input id ="theTerms" style="color:green;" type="checkbox"        onclick="terms('theTerms','name','email','itemName','itemBrand','category','price')" >I agree with these terms and conditions.
                             </p>
 						</div>
 					</div>
@@ -667,13 +667,13 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name.">
+										<input type="text" style="opacity:0.0;" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
+										<input type="email" style="opacity:0.0;" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -682,13 +682,13 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Item Name *" id="itemName" required="" data-validation-required-message="Please enter the item name.">
+										<input type="text" style="opacity:0.0;" class="form-control" placeholder="Item Name *" id="itemName" required="" data-validation-required-message="Please enter the item name.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Item Brand. Put - if unknown" id="itemBrand" required="" data-validation-required-message="Please enter the item brand">
+										<input type="email" style="opacity:0.0;" class="form-control" placeholder="Item Brand. Put - if unknown" id="itemBrand" required="" data-validation-required-message="Please enter the item brand">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -698,13 +698,13 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Category. Either male clothing, female clothing, or other" id="category" required="" data-validation-required-message="Please enter item category">
+										<input type="text" style="opacity:0.0;" class="form-control" placeholder="Category. Either male clothing, female clothing, or other" id="category" required="" data-validation-required-message="Please enter item category">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Enter price *" id="price" required="" data-validation-required-message="Please enter your email address.">
+										<input type="email" style="opacity:0.0;" class="form-control" placeholder="Enter price *" id="price" required="" data-validation-required-message="Please enter your email address.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
@@ -715,7 +715,7 @@
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
 									<button type="submit" class="btn btn-danger">Cancel</button>
-									<button type="submit" class="btn" onclick="hide('uploadSheet'); vanish('postButton')">Finalise post</button>
+									<button type="submit" id="finalise" style="opacity:0.0;"  style="opacity:0.0;" class="btn" onclick="hide('uploadSheet'); vanish('postButton')">Finalise post</button>
 								</div>
 							</div>
 						</form>
